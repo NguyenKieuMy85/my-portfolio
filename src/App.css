@@ -24,6 +24,16 @@
   color: white;
 }
 
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0f1f; /* xanh đen tối */
+  color: white; /* chữ màu trắng để dễ đọc */
+  font-family: Arial, sans-serif;
+}
+
+
 .App-link {
   color: #61dafb;
 }
@@ -36,3 +46,5 @@
     transform: rotate(360deg);
   }
 }
+
+

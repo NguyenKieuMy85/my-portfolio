@@ -1,0 +1,147 @@
+
+/* Navbar */
+/* background: linear-gradient(135deg, #042743, #2d1950); */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(135deg, #042743, #2d1950);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+  }
+  
+  
+  .navbar-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #C0C8D1;
+  }
+  
+  /* Bọc menu + button */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Menu */
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-menu li {
+    margin: 0 20px;
+  }
+  
+  .navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s;
+  }
+  
+  .navbar-menu a:hover {
+    color: #ff9800;
+  }
+  
+  /* Button */
+  .navbar-btn {
+    background: #063962;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 30px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .navbar-btn:hover {
+    background: #e68900;
+  }
+  
+  /* Icon styling */
+  .icon {
+    font-size: 18px;
+  }
+  
+
+/* ==== HERO & INTRO chung ==== */
+.hero, .intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #021526, #0a2647); /* xanh đen tối hơn và đồng nhất */
+    color: #E4E9F7; /* chữ trắng xanh nhạt */
+  }
+  
+  /* Text content */
+  .hero-content, .intro-content {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  /* Tiêu đề chính */
+  .hero-content h1, .intro-content h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #00A9FF; /* xanh neon nổi bật */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Subheading */
+  .hero-content h2, .intro-content h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #9DB2CE; /* xám sáng cho dịu */
+  }
+  
+  /* Ngành học hoặc đoạn mô tả */
+  .hero-content h3, .intro-content p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #00C4CC; /* xanh ngọc nhất quán */
+  }
+  
+  /* Nút bấm */
+  .hero-content .btn-primary {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #00A9FF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .hero-content .btn-primary:hover {
+    background: #0086cc;
+  }
+  
+  /* Hình ảnh */
+  .hero-image img, .intro-image img {
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  }
+  
