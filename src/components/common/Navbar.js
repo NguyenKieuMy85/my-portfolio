@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../style.css"; 
 
 import { FaHome, FaUser, FaProjectDiagram, FaFileAlt, FaBlog, FaEnvelope } from "react-icons/fa";
@@ -13,19 +14,19 @@ const Navbar = () => {
       <div className="navbar-right">
         <ul className="navbar-menu">
           <li>
-            <a href="#home"><FaHome className="icon" /> Home</a>
+            <Link to="/"><FaHome className="icon" /> Home</Link>
           </li>
           <li>
-            <a href="#about"><FaUser className="icon" /> About</a>
+            <Link to="/about"><FaUser className="icon" /> About</Link>
           </li>
           <li>
-            <a href="#projects"><FaProjectDiagram className="icon" /> Projects</a>
+            <Link to="/projects"><FaProjectDiagram className="icon" /> Projects</Link>
           </li>
           <li>
-            <a href="#resume"><FaFileAlt className="icon" /> Resume</a>
+            <Link to="/resume"><FaFileAlt className="icon" /> Resume</Link>
           </li>
           <li>
-            <a href="#blogs"><FaBlog className="icon" /> Blogs</a>
+            <Link to="/blogs"><FaBlog className="icon" /> Blogs</Link>
           </li>
         </ul>
 
