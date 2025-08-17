@@ -231,6 +231,114 @@ body {
   }
 }
 
+/* ================= INTRO ================= */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #0a2647, #021526);
+  color: #E4E9F7;
+  flex-wrap: wrap; /* Cho mobile xuống hàng */
+}
+
+/* Text content */
+.intro-content {
+  flex: 1;
+  padding-right: 40px;
+  text-align: left;
+}
+
+/* Tiêu đề */
+.intro-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00A9FF; /* xanh neon */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Subheading hoặc mô tả */
+.intro-content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #9DB2CE;
+}
+
+.intro-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #B8C4D9;
+}
+
+/* Hình ảnh */
+.intro-image img {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .intro {
+    padding: 60px 5%;
+    flex-direction: column; /* Text trên, ảnh dưới */
+    text-align: center;
+  }
+
+  .intro-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .intro-content h2 {
+    font-size: 28px;
+  }
+
+  .intro-content h3 {
+    font-size: 20px;
+  }
+
+  .intro-content p {
+    font-size: 16px;
+  }
+
+  .intro-image img {
+    width: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .intro {
+    padding: 40px 5%;
+  }
+
+  .intro-content h2 {
+    font-size: 24px;
+  }
+
+  .intro-content h3 {
+    font-size: 18px;
+  }
+
+  .intro-content p {
+    font-size: 15px;
+  }
+
+  .intro-image img {
+    width: 180px;
+  }
+}
+
+
 /* ================= FIND ME ON ================= */
 
 .intro-content {
