@@ -1,36 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "../../style.css"; 
-import { FaHome, FaUser, FaProjectDiagram, FaFileAlt } from "react-icons/fa";
+import { FaBars, FaTimes, FaHome, FaUser, FaProjectDiagram, FaFileAlt } from "react-icons/fa";
+import "../../style.css";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">KM</div>
-      <div className="navbar-right">
-        <ul className="navbar-menu">
-          <li>
-            <NavLink to="/" end className="nav-link">
-              <FaHome className="icon" /> Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about" className="nav-link">
-              <FaUser className="icon" /> About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/projects" className="nav-link">
-              <FaProjectDiagram className="icon" /> Projects
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/resume" className="nav-link">
-              <FaFileAlt className="icon" /> Resume
-            </NavLink>
-          </li>
-        </ul>
+
+      {/* Icon mở menu mobile */}
+      <div className="menu-icon" onClick={() => setOpen(!open)}>
+        {open ? <FaTimes /> : <FaBars />}
       </div>
+
+      {/* Menu */}
+      <ul className={`navbar-menu ${open ? "active" : ""}`}>
+        <li><NavLink to="/" end className="nav-link"> <FaHome /> Home</NavLink></li>
+        <li><NavLink to="/about" className="nav-link"><FaUser /> About</NavLink></li>
+        <li><NavLink to="/projects" className="nav-link"><FaProjectDiagram /> Projects</NavLink></li>
+        <li><NavLink to="/resume" className="nav-link"><FaFileAlt /> Resume</NavLink></li>
+      </ul>
     </nav>
   );
 };

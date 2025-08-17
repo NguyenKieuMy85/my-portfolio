@@ -22,7 +22,7 @@ body {
 
 /* ================= NAVBAR ================= */
 .navbar {
-  position: fixed !important;   /* đảm bảo ghi đè */
+  position: fixed !important;
   top: 0;
   left: 0;
   right: 0;
@@ -37,28 +37,28 @@ body {
 }
 
 .navbar-logo {
-  padding-left: 50px;
+  padding-left: 40px;
   font-size: 28px;
   font-weight: bold;
   color: #C0C8D1;
 }
 
-/* Bọc menu + button */
+/* Menu container */
 .navbar-right {
   display: flex;
   align-items: center;
 }
 
-/* Menu */
+/* Menu list */
 .navbar-menu {
-  padding-right: 50px;
   list-style: none;
   display: flex;
   margin: 0;
+  padding-right: 80px;
 }
 
 .navbar-menu li {
-  margin: 0 30px;
+  margin: 0 20px;
 }
 
 .navbar-menu a {
@@ -75,91 +75,160 @@ body {
   color: #0055ff;
 }
 
-.icon {
-  font-size: 18px;
-}
-
-.nav-link {
-  color: #ddd;
-  font-weight: 500;
-  margin: 0 12px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #00bcd4;
-}
-
 .nav-link.active {
   color: #00bcd4;
   font-weight: 700;
   border-bottom: 2px solid #00bcd4;
 }
 
-/* ================= HERO & INTRO ================= */
-.hero, .intro {
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: #C0C8D1;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 30px;
+  }
+
+  /* Ẩn menu mặc định trên mobile */
+  .navbar-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: linear-gradient(135deg, #021526, #0a2647);
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .navbar-menu.active {
+    display: flex; /* Khi mở menu */
+  }
+
+  .navbar-menu li {
+    margin: 12px 0;
+  }
+
+  .menu-icon {
+    display: block; /* Chỉ hiện trên mobile */
+  }
+}
+
+
+/* ================= HERO ================= */
+.hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 80px 10%;
-  background: linear-gradient(135deg, #021526, #0a2647); /* xanh đen tối hơn và đồng nhất */
-  color: #E4E9F7; /* chữ trắng xanh nhạt */
+  background: linear-gradient(135deg, #021526, #0a2647);
+  color: #E4E9F7;
+  flex-wrap: wrap; /* Cho mobile xuống hàng */
 }
 
 /* Text content */
-.hero-content, .intro-content {
+.hero-content {
   flex: 1;
   padding-right: 40px;
+  text-align: left;
 }
 
 /* Tiêu đề chính */
-.hero-content h1, .intro-content h2 {
+.hero-content h1 {
   font-size: 42px;
   font-weight: 700;
-  margin-bottom: 30px;
-  color: #00A9FF; /* xanh neon nổi bật */
+  margin-bottom: 20px;
+  color: #00A9FF;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 /* Subheading */
-.hero-content h2, .intro-content h3 {
+.hero-content h2 {
   font-size: 26px;
   font-weight: 600;
-  margin-bottom: 30px;
-  color: #9DB2CE; /* xám sáng cho dịu */
+  margin-bottom: 20px;
+  color: #9DB2CE;
 }
 
-/* Ngành học hoặc đoạn mô tả */
-.hero-content h3, .intro-content p {
+/* Typing text */
+.hero-content h3 {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 20px;
-  color: #00C4CC; /* xanh ngọc nhất quán */
-}
-
-/* Nút bấm */
-.hero-content .btn-primary {
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  background: #00A9FF;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.hero-content .btn-primary:hover {
-  background: #0086cc;
+  color: #00C4CC;
 }
 
 /* Hình ảnh */
-.hero-image img, .intro-image img {
+.hero-image img {
   width: 350px;
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .hero {
+    padding: 60px 5%;
+    flex-direction: column; /* Text trên, ảnh dưới */
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content h2 {
+    font-size: 22px;
+  }
+
+  .hero-content h3 {
+    font-size: 18px;
+  }
+
+  .hero-image img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 40px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content h2 {
+    font-size: 20px;
+  }
+
+  .hero-content h3 {
+    font-size: 16px;
+  }
+
+  .hero-image img {
+    width: 200px;
+  }
 }
 
 /* ================= FIND ME ON ================= */
