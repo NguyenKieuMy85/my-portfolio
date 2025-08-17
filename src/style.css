@@ -27,7 +27,7 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  height: 60px;
+  height: 70px;
   background: linear-gradient(135deg, #042743, #2d1950);
   display: flex;
   justify-content: space-between;
@@ -64,7 +64,7 @@ body {
 .navbar-menu a {
   color: #C0C8D1;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -72,13 +72,30 @@ body {
 }
 
 .navbar-menu a:hover {
-  color: #ff9800;
+  color: #0055ff;
 }
 
 .icon {
   font-size: 18px;
 }
 
+.nav-link {
+  color: #ddd;
+  font-weight: 500;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00bcd4;
+}
+
+.nav-link.active {
+  color: #00bcd4;
+  font-weight: 700;
+  border-bottom: 2px solid #00bcd4;
+}
 
 /* ================= HERO & INTRO ================= */
 .hero, .intro {

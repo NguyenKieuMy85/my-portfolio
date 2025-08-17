@@ -20,15 +20,15 @@ const Projects = () => {
       github: "https://github.com/TanPhat0507/water_reminder.git"
     },
     {
-        image: biProject,
+        image: educationSystem,
         title: "Retail BI and Return Prediction System",
-        content: "Developed ETL pipelines and data warehouse schema using SSIS; built OLAP cubes in SSAS for supply chain and sales data analysis. Created interactive dashboards in Power BI and Excel; applied machine learning models to predict product return rates.",
+        content: "The purpose of this project is to design and implement a Business Intelligence (BI) solution for retail and supply chain data. By applying ETL processes, data modeling, OLAP analysis, visualization, and predictive data mining, the project aims to transform raw operational data into actionable insights that improve efficiency, enhance customer satisfaction, and support strategic decision-making.",
         github: "https://github.com/NguyenKieuMy85/RetailPerformanceOptimization.git"
     },
     {
-        image: educationSystem,
+        image: biProject,
         title: "Academic Research Matching System",
-        content: "Built a recommendation system to match researchers to topics based on keyword and field similarity. Processed researcher profiles and applied TF-IDF with Cosine Similarity in Python to rank relevance scores.",
+        content: "The purpose of this project is to develop an academic matching system that connects students and lecturers based on their skills, research interests, and expertise. By applying content-based filtering and visualization techniques, the system helps students find suitable supervisors for research or graduation projects, while enabling lecturers to identify students whose interests align with their academic domains.",
         github: "https://github.com/NguyenKieuMy85/MatchingAcademic.git"
     }
   ];

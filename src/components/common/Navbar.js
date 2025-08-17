@@ -1,38 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../../style.css"; 
-
 import { FaHome, FaUser, FaProjectDiagram, FaFileAlt } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      {/* Logo */}
       <div className="navbar-logo">KM</div>
-
-      {/* Menu + Button nằm bên phải */}
       <div className="navbar-right">
         <ul className="navbar-menu">
           <li>
-            <Link to="/"><FaHome className="icon" /> Home</Link>
+            <NavLink to="/" end className="nav-link">
+              <FaHome className="icon" /> Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/about"><FaUser className="icon" /> About</Link>
+            <NavLink to="/about" className="nav-link">
+              <FaUser className="icon" /> About
+            </NavLink>
           </li>
           <li>
-            <Link to="/projects"><FaProjectDiagram className="icon" /> Projects</Link>
+            <NavLink to="/projects" className="nav-link">
+              <FaProjectDiagram className="icon" /> Projects
+            </NavLink>
           </li>
           <li>
-            <Link to="/resume"><FaFileAlt className="icon" /> Resume</Link>
+            <NavLink to="/resume" className="nav-link">
+              <FaFileAlt className="icon" /> Resume
+            </NavLink>
           </li>
-          {/* <li>
-            <Link to="/blogs"><FaBlog className="icon" /> Blogs</Link>
-          </li> */}
         </ul>
-
-        {/* <button className="navbar-btn">
-          <FaEnvelope className="icon" /> Contact
-        </button> */}
       </div>
     </nav>
   );
