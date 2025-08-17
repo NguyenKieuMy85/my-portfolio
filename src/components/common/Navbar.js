@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../style.css"; 
 
-import { FaHome, FaUser, FaProjectDiagram, FaFileAlt, FaBlog, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaUser, FaProjectDiagram, FaFileAlt } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -25,14 +25,14 @@ const Navbar = () => {
           <li>
             <Link to="/resume"><FaFileAlt className="icon" /> Resume</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/blogs"><FaBlog className="icon" /> Blogs</Link>
-          </li>
+          </li> */}
         </ul>
 
-        <button className="navbar-btn">
+        {/* <button className="navbar-btn">
           <FaEnvelope className="icon" /> Contact
-        </button>
+        </button> */}
       </div>
     </nav>
   );
