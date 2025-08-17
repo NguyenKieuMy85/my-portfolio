@@ -448,3 +448,100 @@ body {
     box-shadow: none;
   }
 }
+
+/* About section */
+/* ================= ABOUT SECTION ================= */
+.about-section {
+  position: relative !important;
+  padding-top: 100px !important;
+  padding-bottom: 30px !important;
+  background: linear-gradient(135deg, #021526, #0a2647);
+  color: white !important;
+}
+
+.about-section h1,
+.about-section h2 {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* Giữ style gradient chữ đẹp */
+.about-section h1 span,
+.about-section h2 span {
+  color: #00C4CC; /* tím highlight */
+}
+
+.about-text {
+  max-width: 800px;   /* Giới hạn chiều rộng đoạn text */
+  margin: 0 auto;     /* Căn giữa ngang */
+  text-align: center; /* Căn giữa nội dung */
+  font-size: 20px;
+  line-height: 1.8;
+  color: #dbe4f3;
+  margin-bottom: 40px;
+  padding: 0 20px;    /* Thêm khoảng cách hai bên khi màn hình nhỏ */
+}
+
+/* Tiêu đề */
+.skills-section h2, 
+.tools-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Grid layout */
+.skills-grid, 
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+/* Icon style giống tech-icons */
+.skills-grid svg,
+.tools-grid svg {
+  font-size: 8em !important;
+  margin: 15px !important;
+  padding: 18px !important;
+  opacity: 0.93 !important;
+  border: 1.7px solid rgba(107, 138, 233, 0.637) !important;
+  text-align: center !important;
+  border-radius: 8px !important;
+  display: table !important;
+  box-shadow: 4px 5px 8px rgba(89, 4, 168, 0.2) !important;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.4s ease-in-out !important;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.skills-grid svg:hover,
+.tools-grid svg:hover {
+  transform: scale(1.08) !important;
+  border: 2.2px solid rgba(37, 60, 190, 0.883) !important;
+  box-shadow: 0 0 20px rgba(197, 115, 230, 0.6) !important;
+  background: rgba(197, 115, 230, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .skills-grid, .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+  }
+
+  .skills-grid svg,
+  .tools-grid svg {
+    font-size: 2.5em !important;
+    padding: 12px !important;
+    margin: 10px !important;
+  }
+}
